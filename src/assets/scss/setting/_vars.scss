@@ -1,0 +1,51 @@
+:root {
+  --mainfont-pretendard: "Pretendard";
+  --mainfont-Paperozi: "Paperozi";
+
+  --white: #fff;
+  --white100: #efefef;
+  --white200: #d9d9d9;
+  --white300: #fff;
+  --white400: #fff;
+  --white500: #fff;
+
+  --gray100: #d9d9d9;
+  --gray200: #b2b2b2;
+  --gray300: #979797;
+  --gray400: #848484;
+  --gray500: #585858;
+
+  --black: #000;
+  --black100: #161616;
+  --black200: #222;
+  --black300: #333;
+  --black400: #444;
+
+  // 블러 효과 (투명도 25) 점점 연해짐
+  --blackAlpha: #00000000;
+  --blackAlpha100: #00000025;
+  --blackAlpha200: #0000004d;
+  --blackAlpha300: #00000091;
+  --blackAlpha400: #000000c3;
+  --blackAlpha500: #000000eb;
+
+  --skyblue: #9bc8f2;
+
+  // 폰트 셋팅
+  font-family: var(--mainfont-pretendard), var(--mainfont-Paperozi);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  // 폰트 최적화
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  @media (max-width: 800px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
