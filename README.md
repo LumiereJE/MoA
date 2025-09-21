@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+MoA (Moments of Art)
+
 ## 프로그램 설치
 
 실행 : yarn dev

@@ -1,15 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface LogoProps {
-  toggleMenu: () => void;
-}
-
-const Logo: React.FC<LogoProps> = ({ toggleMenu }) => {
+const Logo = () => {
   return (
-    <div>
+    <div className="header_logo">
       <Link to="/">
-        <em area-hidden="true" onClick={toggleMenu}></em>
+        <em area-hidden="true"></em>
         <span>MoA</span>
       </Link>
     </div>

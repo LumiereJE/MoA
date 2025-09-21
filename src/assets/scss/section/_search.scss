@@ -1,0 +1,122 @@
+.search-popup {
+  position: relative;
+
+  .search-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/icon/search.svg);
+    background-size: cover;
+    padding: 6px;
+    cursor: pointer;
+    background-color: var(--white);
+  }
+
+  .popup-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .popup-content {
+    position: relative;
+    width: 60%;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+
+    &.open {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--gray400);
+    }
+
+    .bar {
+      width: 20px;
+      height: 3px;
+      background-color: var(--gray500);
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 5px);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(-2.5px, 5.5px);
+      }
+    }
+  }
+
+  .popup-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .popup-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid var(--gray300);
+    border-radius: 8px;
+    outline: none;
+
+    &:focus {
+      border-color: var(--gray500);
+    }
+  }
+
+  .submit-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    background: var(--gray500);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+
+    &:hover {
+      background: var(--gray400);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-popup {
+    .popup-content {
+      width: 90%;
+    }
+  }
+}
