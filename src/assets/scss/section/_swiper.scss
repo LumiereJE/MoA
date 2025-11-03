@@ -1,0 +1,95 @@
+.category_swiper {
+  .title_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .swiper_title {
+      font-weight: 600;
+    }
+    .more {
+      transition: all 0.4s;
+      &:hover {
+        color: var(--gray300);
+      }
+    }
+  }
+  .swiper__inner {
+    .mySwiper {
+      position: relative;
+      .swiper-wrapper {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      // 각 슬라이드
+      .swiper-slide {
+        width: auto !important;
+        background: #f9f9f9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+        .card {
+          width: 220px;
+          aspect-ratio: 16 / 21.3;
+          overflow: hidden;
+          transition: all 0.3s;
+
+          .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+          }
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: #f9f9f9;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--gray500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+        opacity: 1;
+      }
+      .swiper-button-prev {
+        left: 8px;
+        transform: translateY(-50%) rotate(180deg);
+      }
+      .swiper-button-next {
+        right: 8px;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        cursor: pointer;
+        background-color: var(--gray100);
+      }
+    }
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: #fff !important;
+    font-size: 30px !important;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff !important;
+  }
+}

@@ -5,7 +5,7 @@ export const headerNavi = [
   },
   {
     title: "공연",
-    src: "/",
+    src: "/event/list/",
   },
   {
     title: "모먼트",
